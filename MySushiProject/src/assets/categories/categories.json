@@ -1,0 +1,47 @@
+{
+  "categories":
+  [
+    {
+      "id": 1,
+      "name": "Запеченые роллы",
+      "imgUrl": "assets/images/menu/zapechenuye-rolly-menu.webp",
+      "iconUrl": "assets/images/menu/zapechen-70-70.png",
+      "url": "/menu/baked-rolls"
+    },
+    {
+      "id": 2,
+      "name": "Обжаренные роллы",
+      "imgUrl": "assets/images/menu/objarennie-rolly-menu.webp",
+      "iconUrl": "assets/images/menu/obazhar-rolly-70x70.png",
+      "url": "/menu/fried-rolls"
+    },
+    {
+      "id": 3,
+      "name": "Роллы",
+      "imgUrl": "assets/images/menu/rolly-menu.webp",
+      "iconUrl": "assets/images/menu/rolly-70x70.png",
+      "url": "/menu/rolls"
+    },
+    {
+      "id": 4,
+      "name": "Сеты",
+      "imgUrl": "assets/images/menu/seti-menu.webp",
+      "iconUrl": "assets/images/menu/sety-70x70.png",
+      "url": "/menu/sets"
+    },
+    {
+      "id": 5,
+      "name": "Суши",
+      "imgUrl": "assets/images/menu/sushi-menu.webp",
+      "iconUrl": "assets/images/menu/sushi-70x70.png",
+      "url": "/menu/sushi"
+    },
+    {
+      "id": 6,
+      "name": "Пицца",
+      "imgUrl": "assets/images/menu/pizza-menu.webp",
+      "iconUrl": "assets/images/menu/pizza-70x70.png",
+      "url": "/menu/pizza"
+    }
+  ]
+}

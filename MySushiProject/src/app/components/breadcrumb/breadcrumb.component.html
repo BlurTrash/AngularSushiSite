@@ -1,0 +1,7 @@
+<div class="bread__crumbs__container">
+  <div class="bread__crumb" *ngFor="let breadCrumb of breadCrumbs">
+    <a  routerLink="{{breadCrumb?.url}}">{{breadCrumb?.label}}</a>
+  </div>
+</div>
+
+

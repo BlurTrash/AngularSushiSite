@@ -1,0 +1,150 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.non__active {
+  display: none;
+}
+
+.menu__component {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #1f1f1f;
+  background-color: #ffffff;
+}
+
+/* main__menu */
+
+/* .block-heading::before {
+  content: "";
+  display: block;
+} */
+
+.main__menu {
+  padding-bottom: 70px;
+}
+
+.main__menu__header {
+  padding-top: 70px;
+}
+
+.block-heading {
+  padding: 10px 15px;
+  margin-bottom: 55px;
+}
+
+.title-decoration {
+  margin-top: 15px;
+}
+
+.items__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  width: 360px;
+  margin-bottom: 40px;
+}
+
+.item a {
+  display: block;
+  position: relative;
+}
+
+.item a p {
+  font-family: "CynthoNext";
+  font-weight: 400;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -21.98%, #000000 100%);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px 5px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.items__container .item img {
+  width: 100%;
+}
+
+/* catalog-menu */
+.catalog-menu {
+  background: url(src/assets/images/menu/bg-body.png);
+  padding: 15px 0;
+}
+
+.catalog-menu__open {
+  text-align: center;
+  padding: 10px 0;
+  background: #70afbb;
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+
+.catalog-menu .menu-index {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.menu-index {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.menu-index-item {
+  display: table-cell;
+  text-align: center;
+}
+
+.menu-index-item a {
+  text-decoration: none;
+  color: #337ab7;
+  background-color: transparent;
+}
+
+.menu-index-item a:hover .name {
+  color: #1f1f1f;
+}
+
+.menu-index-item a .img {
+  height: 70px;
+  width: 70px;
+}
+
+.menu-index-item a .name {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #32b4b8;
+  margin: 0;
+  /* text-transform: uppercase; */
+  transition: all 0.5s;
+}
+

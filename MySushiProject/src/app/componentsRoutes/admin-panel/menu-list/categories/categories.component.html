@@ -1,0 +1,42 @@
+<div>
+  <div class="form-group">
+    <label for="categoryName">Название категории</label>
+    <input type="text" class="form-control" name="categoryName" [(ngModel)]="categoryName">
+  </div>
+  <div class="form-group">
+    <label for="categoryUrl">Url категории маршрута</label>
+    <input type="text" class="form-control" name="categoryUrl" [(ngModel)]="categoryUrl">
+  </div>
+  <div class="form-group">
+    <!-- <label for="categoryUrl">Выберите изображение для категории</label> -->
+   <!--  <button (click)="openFile()">Browsse
+      <input id="inputFile" type="file" style="display:none" (change)="handle($event)">
+    </button> -->
+
+   <!--  <input type="file" class="file-upload" (change)="handle($event)"> -->
+
+    <input type="file" accept="image/.jpeg,.jpg,.png,.webp" class="file-input" (change)="onFilePhotoSelected($event)" #filePhotoUpload>
+
+    <div class="file-upload">{{filePhotoName || "Файл не выбран!"}}
+      <button class="upload-btn" (click)="filePhotoUpload.click()">
+          Фото категории
+      </button>
+    </div>
+    <img id="previewPhoto" width="200px" height="150px">
+  </div>
+
+  <div class="form-group">
+    <input type="file" accept="image/.jpeg,.jpg,.png,.webp" class="file-input" (change)="onFileIconSelected($event)" #fileIconUpload>
+
+    <div class="file-upload">{{fileIconName || "Файл не выбран!"}}
+      <button class="upload-btn" (click)="fileIconUpload.click()">
+          Иконка категории
+      </button>
+    </div>
+    <img id="previewIcon" width="200px" height="150px">
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-default" (click)="addCategory()">Добавить</button>
+  </div>
+</div>

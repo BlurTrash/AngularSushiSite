@@ -23,6 +23,13 @@ import { ItemsComponent } from './componentsRoutes/admin-panel/menu-list/items/i
 import { ToppingsComponent } from './componentsRoutes/admin-panel/menu-list/toppings/toppings.component';
 import { UsersComponent } from './componentsRoutes/admin-panel/menu-list/users/users.component';
 import { OrdersComponent } from './componentsRoutes/admin-panel/menu-list/orders/orders.component';
+import { ProductComponent } from './componentsRoutes/menu/product/product.component';
+import { BreadcrumbService } from './services/breadcrumbService/breadcrumb.service';
+import { ProductCardComponent } from './components/productCard/product-card/product-card.component';
+
+const pizzasRoutes: Routes = [
+  { path: 'pizza/:id', data: { breadcrumb: 'Товар'}, component: ProductComponent}
+]
 
 const menuRoutes: Routes = [
   { path: 'baked-rolls', data: { breadcrumb: 'Запеченые Роллы'}, component: BakedRollesComponent},
@@ -30,7 +37,15 @@ const menuRoutes: Routes = [
   { path: 'rolls', data: { breadcrumb: 'Роллы'}, component: RollsComponent},
   { path: 'sets', data: { breadcrumb: 'Сеты'}, component: SetsComponent},
   { path: 'sushi', data: { breadcrumb: 'Суши'}, component: SushiComponent},
-  { path: 'pizza', data: { breadcrumb: 'Пицца'}, component: PizzaComponent}
+  { path: 'pizzas', data: { breadcrumb: 'Пицца'}, component: PizzaComponent},
+  { path: 'pizzas/:id', data: { breadcrumb: 'Пицца'}, component: ProductComponent },
+  { path: 'baked-rolls/:id', data: { breadcrumb: 'Запеченые Роллы'}, component: ProductComponent },
+  { path: 'fried-rolls/:id', data: { breadcrumb: 'Обжаренные Роллы'}, component: ProductComponent },
+  { path: 'rolls/:id', data: { breadcrumb: 'Роллы'}, component: ProductComponent },
+  { path: 'sets/:id', data: { breadcrumb: 'Сеты'}, component: ProductComponent },
+  { path: 'sushi/:id', data: { breadcrumb: 'Суши'}, component: ProductComponent }
+ /*  { path: 'pizzas', data: { breadcrumb: 'Пицца'}, component: PizzaComponent, children: pizzasRoutes} */
+
 ]
 
 const adminPanelRoutes: Routes = [
@@ -71,16 +86,18 @@ const appRoutes: Routes = [
     ItemsComponent,
     ToppingsComponent,
     UsersComponent,
-    OrdersComponent
+    OrdersComponent,
+    ProductComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [BreadcrumbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

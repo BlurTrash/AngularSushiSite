@@ -8,6 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\obazhar-rolly-70x70.png" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\objarennie-rolly-menu.webp" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\pizza-70x70.png" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\pizza-menu.webp" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\rolly-70x70.png" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\rolly-menu.webp" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\seti-menu.webp" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\sety-70x70.png" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\sushi-70x70.png" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\sushi-menu.webp" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\zapechen-70-70.png" />
+    <Content Remove="wwwroot\FileStorage\CategoriesImg\zapechenuye-rolly-menu.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
@@ -16,6 +31,25 @@
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\FileStorage\CategoriesImg\obazhar-rolly-70x70.png" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\objarennie-rolly-menu.webp" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\pizza-70x70.png" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\pizza-menu.webp" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\rolly-70x70.png" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\rolly-menu.webp" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\seti-menu.webp" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\sety-70x70.png" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\sushi-70x70.png" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\sushi-menu.webp" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\zapechen-70-70.png" />
+    <None Include="wwwroot\FileStorage\CategoriesImg\zapechenuye-rolly-menu.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\FileStorage\ItemsImg\" />
   </ItemGroup>
 
 </Project>

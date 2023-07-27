@@ -47,3 +47,4 @@ C:\Programming\Проекты\WebProjects\AngularSushiSite\MyShushiApi\MyShushiS
 C:\Programming\Проекты\WebProjects\AngularSushiSite\MyShushiApi\MyShushiSiteApi\MyShushiSiteApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Programming\Проекты\WebProjects\AngularSushiSite\MyShushiApi\MyShushiSiteApi\MyShushiSiteApi\bin\Debug\net6.0\Npgsql.dll
 C:\Programming\Проекты\WebProjects\AngularSushiSite\MyShushiApi\MyShushiSiteApi\MyShushiSiteApi\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Programming\Проекты\WebProjects\AngularSushiSite\MyShushiApi\MyShushiSiteApi\MyShushiSiteApi\bin\Debug\net6.0\MyShushiSiteApi.staticwebassets.runtime.json

@@ -20,13 +20,11 @@ export class MenuComponent implements OnInit {
     //this.categoryService.getData().subscribe({next: (data:any)=> this.categories = data["categories"]});
 
     this.categoryService.getAllCategories().subscribe((data) => {
-      //console.log(data);
-
       this.categories = data;
-      this.categories.forEach((category) => {
+     /*  this.categories.forEach((category) => {
         category.imageData = 'data:image/png;base64,' + category.imageData;
         category.iconData = 'data:image/png;base64,' + category.iconData;
-      });
+      }); */
 
       /* let firstobj = data[0];
       let img = 'data:image/png;base64,' + firstobj.imageData;

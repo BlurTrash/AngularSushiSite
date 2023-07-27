@@ -1,5 +1,5 @@
-<div>
-  <div class="form-group">
+<div class="padding-left-right-15">
+  <!-- <div class="form-group">
     <label for="categoryName">Название категории</label>
     <input type="text" class="form-control" name="categoryName" [(ngModel)]="categoryName">
   </div>
@@ -8,13 +8,6 @@
     <input type="text" class="form-control" name="categoryUrl" [(ngModel)]="categoryUrl">
   </div>
   <div class="form-group">
-    <!-- <label for="categoryUrl">Выберите изображение для категории</label> -->
-   <!--  <button (click)="openFile()">Browsse
-      <input id="inputFile" type="file" style="display:none" (change)="handle($event)">
-    </button> -->
-
-   <!--  <input type="file" class="file-upload" (change)="handle($event)"> -->
-
     <input type="file" accept="image/.jpeg,.jpg,.png,.webp" class="file-input" (change)="onFilePhotoSelected($event)" #filePhotoUpload>
 
     <div class="file-upload">{{filePhotoName || "Файл не выбран!"}}
@@ -38,5 +31,163 @@
 
   <div class="form-group">
     <button class="btn btn-default" (click)="addCategory()">Добавить</button>
+  </div> -->
+
+  <input type="button" (click)="openModalWindow(true)" value="Добавить" class="btn btn-success margin-bot-15" />
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <td>Id</td>
+        <td>Название категории</td>
+        <td>Маршрут</td>
+        <td>Фото</td>
+        <td>Иконка</td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categories">
+          <td>{{category.id}}</td>
+          <td>{{category.name}}</td>
+          <td>{{category.url}}</td>
+          <td><img width="50px" height="30px" [src]="category.imageData"></td>
+          <td><img width="30px" height="30px" [src]="category.iconData"></td>
+          <td>
+              <input type="button" value="Изменить" class="btn btn-success btn-large" (click)="openModalWindow(false, category)"/>
+              <button type="button" class="btn btn-success btn-small" (click)="openModalWindow(false, category)">
+                <i class="pi pi-pencil"></i>
+              </button>
+          </td>
+          <td>
+              <input type="button" value="Удалить"  class="btn btn-danger btn-large" (click)="openDeleteWindow(category)"/>
+              <button type="button" class="btn btn-danger btn-small" (click)="openDeleteWindow(category)">
+                <i class="pi pi-times"></i>
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
+<div #modalwindowborder  class="modal_window_border" style="display: none;" (click)="closeModalWindow()"></div>
+<div #modalwindow class="modal_window" style="display: none;">
+  <form #catForm="ngForm">
+    <div class="col-xs-10">
+      <div class="form-group">
+        <label class="margin_bot_5 form-label" for="categoryName">Название категории</label>
+        <input type="text" class="form-control" name="categoryName" [(ngModel)]="categoryName" #name="ngModel" required>
+        <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+          Введите имя категории
+        </div>
+      </div>
+      <div class="form-group margin_top_15">
+        <label class="margin_bot_5 form-label" for="categoryUrl">Url категории маршрута</label>
+        <input type="text" class="form-control" name="categoryUrl" [(ngModel)]="categoryUrl" #url="ngModel">
+        <div [hidden]="url.valid || url.untouched" class="alert alert-danger">
+          Введите url категории
+        </div>
+      </div>
+      <div class="form-group margin_top_15">
+        <label for="imgFile form-label" class="margin_bot_5">Фото категории</label>
+        <input class="form-control margin_bot_5" type="file" id="imgFile" name="imgFile" accept="image/.jpeg,.jpg,.png,.webp" (click)="onFilePhotoClick()" [(ngModel)]="filePhotoInput" (change)="onFilePhotoSelected($event)" #filePhotoUpload="ngModel" required>
+        <img id="previewPhoto" width="80px" height="50px" style="display: none;" [src]="categoryImageData">
+        <!-- <div [hidden]="filePhotoUpload.valid || filePhotoUpload.untouched" class="alert alert-danger">
+          Выберите фото категории
+        </div> -->
+        <div *ngIf="(categoryImageData === '' || categoryImageData === undefined) && !filePhotoUpload.untouched" class="alert alert-danger">
+          Выберите фото категории
+        </div>
+
+        <!-- <input type="file" accept="image/.jpeg,.jpg,.png,.webp" class="file-input" (change)="onFilePhotoSelected($event)" #filePhotoUpload>
+        <div class="file-upload">{{filePhotoName || "Файл не выбран!"}}
+          <button class="upload-btn" (click)="filePhotoUpload.click()">
+              Фото категории
+          </button>
+        </div>
+        <img id="previewPhoto" width="200px" height="150px"> -->
+      </div>
+
+      <div class="form-group margin_top_15">
+        <label for="iconFile form-label" class="margin_bot_5">Иконка категории</label>
+        <input class="form-control margin_bot_5" type="file" id="iconFile" name="iconFile" accept="image/.jpeg,.jpg,.png,.webp" (click)="onFileIconClick()" [(ngModel)]="fileIconInput" (change)="onFileIconSelected($event)" #fileIconUpload="ngModel" required>
+        <img #iconImg id="previewIcon" width="80" height="50px" style="display: none;"  [src]="categoryIconData">
+      <!--  <div [hidden]="fileIconUpload.valid || fileIconUpload.untouched" class="alert alert-danger">
+          Выберите иконку категории
+        </div> -->
+        <div *ngIf="(categoryIconData === '' || categoryIconData === undefined) && !fileIconUpload.untouched" class="alert alert-danger">
+          Выберите иконку категории
+        </div>
+
+      <!--  <input type="file" accept="image/.jpeg,.jpg,.png,.webp" class="file-input" (change)="onFileIconSelected($event)" #fileIconUpload>
+        <div class="file-upload">{{fileIconName || "Файл не выбран!"}}
+          <button class="upload-btn" (click)="fileIconUpload.click()">
+              Иконка категории
+          </button>
+        </div>
+        <img id="previewIcon" width="200px" height="150px"> -->
+      </div>
+
+      <div class="margin_top_40">
+        <p id="error" class="error_text" >{{errorMessage}}</p>
+      </div>
+      <div class="form-group btn_container margin_top_15">
+        <button #addButton class="btn btn-success" [disabled]="name.invalid || url.invalid || categoryIconData === undefined || categoryIconData === '' || categoryImageData === undefined || categoryImageData === ''" (click)="addCategory()">Добавить</button>
+        <button #updateButton class="btn btn-primary" [disabled]="name.invalid || url.invalid || categoryIconData === undefined || categoryIconData === '' || categoryImageData === undefined || categoryImageData === ''" (click)="updateCategory()">Сохранить</button>
+        <button  class="btn btn-secondary" (click)="closeModalWindow()">Отмена</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- <div class="col-xs-10">
+    <div class="form-group">
+      <label class="margin_bot_5 form-label" for="categoryName">Название категории</label>
+      <input type="text" class="form-control" name="categoryName" [(ngModel)]="categoryName" #name="ngModel" required >
+      <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+        Введите имя категории
+      </div>
+    </div>
+    <div class="form-group margin_top_15">
+      <label class="margin_bot_5 form-label" for="categoryUrl">Url категории маршрута</label>
+      <input type="text" class="form-control" name="categoryUrl" [(ngModel)]="categoryUrl" #url="ngModel">
+      <div [hidden]="url.valid || url.untouched" class="alert alert-danger">
+        Введите url категории
+      </div>
+    </div>
+    <div class="form-group margin_top_15">
+      <label for="imgFile form-label" class="margin_bot_5">Фото категории</label>
+      <input class="form-control margin_bot_5" type="file" id="imgFile" accept="image/.jpeg,.jpg,.png,.webp" (click)="onFilePhotoClick()" [(ngModel)]="filePhotoInput" (change)="onFilePhotoSelected($event)" #filePhotoUpload="ngModel" required>
+      <img id="previewPhoto" width="80px" height="50px" style="display: none;" [src]="categoryImageData">
+      <div [hidden]="filePhotoUpload.valid || filePhotoUpload.untouched" class="alert alert-danger">
+        Выберите фото категории
+      </div>
+    </div>
+
+    <div class="form-group margin_top_15">
+      <label for="iconFile form-label" class="margin_bot_5">Иконка категории</label>
+      <input class="form-control margin_bot_5" type="file" id="iconFile" accept="image/.jpeg,.jpg,.png,.webp" (click)="onFileIconClick()" [(ngModel)]="fileIconInput" (change)="onFileIconSelected($event)" #fileIconUpload="ngModel" required>
+      <img id="previewIcon" width="80" height="50px" style="display: none;"  [src]="categoryIconData">
+      <div [hidden]="fileIconUpload.valid || fileIconUpload.untouched" class="alert alert-danger">
+        Выберите иконку категории
+      </div>
+    </div>
+
+    <div class="form-group btn_container margin_top_40">
+      <button type="submit" class="btn btn-primary" [disabled]="name.invalid || url.invalid || filePhotoUpload.invalid || fileIconUpload.invalid" (click)="addCategory()">Добавить</button>
+      <button type="reset" class="btn btn-secondary" (click)="closeModalWindow()">Отмена</button>
+    </div>
+  </div> -->
+
+ <!-- (click)="addCategory()"-->
+ <!-- [disabled]="name.invalid || url.invalid || filePhotoUpload.invalid || fileIconUpload.invalid" -->
+ <!-- (click)="closeModalWindow()" -->
+ <!-- [disabled] -->
+
+</div>
+<div #modaldeletewindowborder class="modal_window_border" style="display: none;" (click)="closeDeleteWindow()"></div>
+<div #modaldeletewindow class="modal_window width_300" style="display: none;">
+  <div class="info_text">Вы действительно хотите удалить выбранный элемент?</div>
+  <div class="form-group btn_container margin_top_40">
+    <button #deleteButtonYes class="btn btn-primary" (click)="deleteCategory()">Да</button>
+    <button #deleteButtonNo class="btn btn-secondary" (click)="closeDeleteWindow()">Нет</button>
+  </div>
+</div>
+

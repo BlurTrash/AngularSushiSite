@@ -118,7 +118,7 @@ img {
 }
 
 /* about__main */
-.about__main {
+.about__main, .newest__items {
   margin-bottom: 60px;
 }
 
@@ -133,6 +133,14 @@ img {
   font-weight: bold;
   font-family: "Spectral-Bold" !important;
   color: #025072;
+}
+
+.items__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 20px;
 }
 
 .title-decoration {

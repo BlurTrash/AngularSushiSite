@@ -3,7 +3,7 @@
     <div class="catalog-menu__open">Меню</div>
     <div class="menu-index">
       <div class="menu-index-item" *ngFor="let linkCat of categories">
-        <a routerLink="{{linkCat?.url}}">
+        <a routerLink="{{linkCat?.fullUrl}}">
           <img class="img" src="{{linkCat?.iconData}}" alt="{{linkCat?.name}}">
           <p class="name">{{linkCat?.name}}</p>
         </a>
@@ -22,7 +22,7 @@
     </div>
     <div class="items__container">
       <div class="item" *ngFor="let cat of categories">
-        <a routerLink="{{cat?.url}}">
+        <a routerLink="{{cat?.fullUrl}}">
           <img src="{{cat?.imageData}}" alt="{{cat?.name}}">
           <p>{{cat?.name}}</p>
         </a>

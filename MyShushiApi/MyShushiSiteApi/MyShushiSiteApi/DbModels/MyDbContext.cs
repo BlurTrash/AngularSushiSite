@@ -43,6 +43,10 @@ namespace MyShushiSiteApi.DbModels
                     .HasColumnName("create_date")
                     .HasDefaultValueSql("'2023-05-06 16:31:07.647713'::timestamp without time zone");
 
+                entity.Property(e => e.FullUrl)
+                    .HasMaxLength(1000)
+                    .HasColumnName("full_url");
+
                 entity.Property(e => e.IconUrl)
                     .HasMaxLength(1000)
                     .HasColumnName("icon_url");
@@ -75,13 +79,22 @@ namespace MyShushiSiteApi.DbModels
 
                 entity.Property(e => e.CategoryId).HasColumnName("category_id");
 
+                entity.Property(e => e.Count)
+                    .HasColumnName("count")
+                    .HasDefaultValueSql("1");
+
                 entity.Property(e => e.CreateDate)
                     .HasColumnType("timestamp without time zone")
-                    .HasColumnName("create_date");
+                    .HasColumnName("create_date")
+                    .HasDefaultValueSql("now()");
 
                 entity.Property(e => e.Desription)
                     .HasMaxLength(2000)
                     .HasColumnName("desription");
+
+                entity.Property(e => e.FullUrl)
+                    .HasMaxLength(1000)
+                    .HasColumnName("full_url");
 
                 entity.Property(e => e.ImageUrl)
                     .HasMaxLength(1000)
@@ -101,6 +114,10 @@ namespace MyShushiSiteApi.DbModels
                     .HasColumnName("name");
 
                 entity.Property(e => e.Price).HasColumnName("price");
+
+                entity.Property(e => e.UrlName)
+                    .HasMaxLength(100)
+                    .HasColumnName("url_name");
 
                 entity.Property(e => e.Weight).HasColumnName("weight");
             });

@@ -7,7 +7,7 @@
         public string Url { get; set; }
         //public string ImageUrl { get; set; }
         //public string IconUrl { get; set; }
-        public IFormFile ImageData { get; set; }
-        public IFormFile IconData { get; set; }
+        public IFormFile? ImageData { get; set; }
+        public IFormFile? IconData { get; set; }
     }
 }

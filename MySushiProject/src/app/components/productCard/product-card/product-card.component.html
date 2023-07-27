@@ -1,0 +1,17 @@
+<div class="item">
+  <div class="image__block">
+    <a [routerLink]="itemLink">
+      <img class="image__responsive" src="{{imageUrl}}" alt="{{name}}">
+    </a>
+  </div>
+  <div class="description__block">
+    <div class="desc__header">
+      {{name}}
+    </div>
+    <p class="desc__text">{{ingridients}}</p>
+  </div>
+  <div class="order__block">
+    <p class="order__price">{{price}} Р</p>
+    <button class="basket">В корзину</button>
+  </div>
+</div>

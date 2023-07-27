@@ -18,5 +18,8 @@ namespace MyShushiSiteApi.DbModels
         public decimal Price { get; set; }
         public decimal Weight { get; set; }
         public int? CategoryId { get; set; }
+        public string UrlName { get; set; } = null!;
+        public decimal Count { get; set; }
+        public string? FullUrl { get; set; }
     }
 }

@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="main__menu__header">
+    <h2 class="block-heading">
+      {{product.name}}
+      <span class="title-decoration"></span>
+    </h2>
+  </div>
+  <div class="product__main">
+    <div class="left__block">
+      <img class="left__image" src="{{product.imageUrl}}" title="{{product.name}}" alt="{{product.name}}">
+    </div>
+    <div class="right__block">
+      <div class="eat__composition">
+        <div class="item__comp ingrid__block">
+          <div class="item__content">
+            <span>Состав: </span>
+            <span>{{product.ingredients}}</span>
+          </div>
+        </div>
+        <div class="item__comp count__block">
+          <div class="item__content">
+            <span>Количество: </span>
+            <span>{{product.count}} шт.</span>
+          </div>
+        </div>
+        <div class="item__comp weight__block">
+          <div class="item__content">
+            <span>Вес: </span>
+            <span>{{product.weight}} гр.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="eat__description item__comp">
+        <div class="item__content">
+          <span>Описание: </span>
+          <span>{{product.desription}}</span>
+        </div>
+      </div>
+
+      <div class="block__price">
+        <div class="price">
+          <span>Цена: </span>
+          <span>{{product.price}} Р</span>
+        </div>
+
+        <button class="basket">В корзину</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main__menu__header">
+    <h2 class="block-heading">
+      Попробуйте также
+      <span class="title-decoration"></span>
+    </h2>
+  </div>
+  <div class="items__container">
+    <app-product-card *ngFor="let item of similarProducts" [name]="item.name"
+        [ingridients]="item.ingredients" [price]="item.price" [itemId]="item.id" [imageUrl]="item.imageUrl"
+        [itemLink]="['../', item.id]"></app-product-card><!-- ['../', item.id] -->
+  </div>
+</div>
+
+
+

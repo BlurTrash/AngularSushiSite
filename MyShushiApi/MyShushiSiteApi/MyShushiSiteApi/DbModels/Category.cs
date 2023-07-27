@@ -15,5 +15,6 @@ namespace MyShushiSiteApi.DbModels
         public string Url { get; set; } = null!;
         public string ImageUrl { get; set; } = null!;
         public string IconUrl { get; set; } = null!;
+        public string? FullUrl { get; set; }
     }
 }

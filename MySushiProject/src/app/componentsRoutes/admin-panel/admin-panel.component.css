@@ -58,5 +58,44 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .content {
   width: 80%;
-  height: 600px;
+}
+
+@media (max-width: 960px) {
+  .menu ul li a {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 767px) {
+  .admin-panel__container {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu ul{
+    padding: 10px 15px 10px 15px;
+  }
+
+  .menu ul li a {
+    font-size: 14px;
+    margin: 5px 5px;
+    padding: 5px;
+  }
+
+  .menu ul li a:hover {
+    position: static;
+    border: none;
+    background: #f0f4f6;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .list {
+    display: flex;
+  }
 }

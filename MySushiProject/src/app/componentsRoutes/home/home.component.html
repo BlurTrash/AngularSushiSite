@@ -47,6 +47,19 @@
       </div>
     </div>
 
+   <div class="newest__items">
+    <div class="container">
+      <h2 class="block-heading">Новинки
+        <span class="title-decoration"></span>
+      </h2>
+      <div class="items__container">
+        <app-product-card *ngFor="let item of newestProducts" [name]="item.name"
+            [ingridients]="item.ingredients" [price]="item.price" [itemId]="item.id" [imageUrl]="item.imageUrl"
+            [itemLink]="item.fullUrl"></app-product-card>
+      </div>
+    </div>
+   </div>
+
     <div class="about__main">
       <div class="container">
         <h2 class="block-heading">Доставка от Sushi House
@@ -54,7 +67,7 @@
         </h2>
         <div class="about_main_list padding_right">
           <div class="about_main_item">
-            <p class="about_main_text">Служба доставки «Море суши» предлагает вашему вниманию суши, роллы и много других вкусных блюд для заказа домой или в офис в Туле.</p>
+            <p class="about_main_text">Служба доставки «Суши Хаус» предлагает вашему вниманию суши, роллы и много других вкусных блюд для заказа домой или в офис в Туле.</p>
             <p class="about_main_text">
               Радуем наших клиентов с 2012 года. «Море суши» – это качество, проверенное временем! У нас вы найдете аппетитные и сытные блюда на заказ, приготовленные по традиционным рецептам, а также наши фирменные наработки:
             </p>

@@ -1,0 +1,135 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main__menu__header {
+  padding-top: 10px;
+}
+
+.block-heading {
+  padding: 10px 15px;
+}
+
+.title-decoration {
+  margin-top: 15px;
+}
+
+.product__main {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "CynthoNext";
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+
+.left__block {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left__image {
+  border-radius: 20px;
+  width: 90%;
+  box-shadow: 2px 2px 4px #02507270;
+}
+
+.right__block {
+  text-align: left;
+  margin-left: 35px;
+  vertical-align: top;
+  width: 55%;
+}
+
+.eat__composition {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.item__comp {
+  background: #e1ebf0;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.item__comp p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.ingrid__block {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.count__block {
+  grid-column: span 3;
+}
+
+.weight__block {
+  grid-column: span 3;
+}
+
+.item__content {
+  display: inline-flex;
+  align-items: center;
+  color: #1F1F1FB7;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 1.43;
+}
+
+.item__content span:first-child {
+  margin-right: 10px;
+  color: #025072;
+}
+
+.eat__description {
+  margin-top: 20px;
+}
+
+.block__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.block__price .price {
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block;
+  color: #025072;
+}
+
+.block__price .price span:first-child {
+  margin-right: 10px;
+}
+
+.basket {
+  width: 140px;
+}
+
+.items__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}

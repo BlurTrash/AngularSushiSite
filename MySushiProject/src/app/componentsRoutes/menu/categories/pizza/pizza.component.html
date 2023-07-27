@@ -1,1 +1,56 @@
-<p>pizza works!</p>
+<div class="container">
+  <div class="pizza__lists" [class.non__active]="!router.isActive('/menu/pizzas', true)">
+    <div class="main__menu__header">
+      <h2 class="block-heading">
+        Пицца
+        <span class="title-decoration"></span>
+      </h2>
+    </div>
+
+    <!-- <div class="items__container">
+      <div class="item" *ngFor="let pizza of pizzaList">
+        <div class="image__block">
+          <a [routerLink]="['pizza', pizza.id]">
+            <img class="image__responsive" src="{{pizza?.imageUrl}}" alt="{{pizza?.name}}">
+          </a>
+        </div>
+        <div class="description__block">
+          <div class="desc__header">
+            {{pizza.name}}
+          </div>
+          <p class="desc__text">{{pizza.ingredients}}</p>
+        </div>
+        <div class="order__block">
+          <p class="order__price">{{pizza.price}} Р</p>
+          <button class="basket">В корзину</button>
+        </div>
+      </div>
+    </div> -->
+
+   <!--  <div class="items__container">
+      <app-product-card *ngFor="let pizza of pizzaList" [name]="pizza.name"
+      [ingridients]="pizza.ingredients" [price]="pizza.price" [itemId]="pizza.id" [imageUrl]="pizza.imageUrl"
+      [itemLink]="['pizza', pizza.id]"></app-product-card>
+    </div> -->
+
+    <div class="items__container">
+      <app-product-card *ngFor="let pizza of pizzaList" [name]="pizza.name"
+      [ingridients]="pizza.ingredients" [price]="pizza.price" [itemId]="pizza.id" [imageUrl]="pizza.imageUrl"
+      [itemLink]="['./', pizza.id]"></app-product-card>
+    </div>
+
+
+    <div class="text">
+      <p>Мы  осуществляем доставку не только на дом, но и в офисы. Доставка заказов  на сумму свыше 700 рублей осуществляется бесплатно в пределах города. Вы еще не определили своего  фаворита среди пицц? Меню «Суши Хаус» позволит выбрать любимую из широкого  ассортимента:</p>
+      <ul class="list">
+        <li>Мясные  пиццы. Ветчина, куриное филе, охотничьи колбаски, салями, карбонат. Какую  начинку выбрать? А может смиксовать все сразу, добавить зелени, оливок,  сладкого перца? Перед такой пиццей невозможно устоять.</li>
+        <li>С  морепродуктами. Что насчет комбинации лосося, лимона, базилика и сливок? Да это  же объедение! Креветки, мидии и кальмары под щедрым слоем расплавленного сыра —  лакомство искушенного гурмана.</li>
+        <li>Пикантные.  Пицца с белыми грибами, закрытые пиццы с карбонатом и томатами. А может желаете  добавить маринованных огурчиков?</li>
+        <li>Вегетарианские.  С томатами, рукколой и соусом Песто. И сыра, больше сыра!</li>
+      </ul>
+      <p>Пицца  для одного и для большой компании, любителям сырных деликатесов и мясных  вкусов, детская, морская, с обилием зелени и сытной начинки — все это будет у  вас на руках в кратчайшие сроки благодаря нашим курьерам. Для владельцев карты  Привилегий действует особая скидка: бесплатная доставка на сумму от 500 рублей,  и кэшбэк на бонусную карту (10%).</p>
+    </div>
+  </div>
+
+ <!--  <router-outlet></router-outlet> -->
+</div>

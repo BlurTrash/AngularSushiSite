@@ -1,9 +1,9 @@
 
 <div class="admin-panel__component">
-
+  <app-breadcrumb ></app-breadcrumb>
   <div class="admin-panel__container">
     <div class="menu">
-      <ul>
+      <ul class="list">
         <li><a routerLink="categories">Категории</a></li>
         <li><a routerLink="items">Товары</a></li>
         <li><a routerLink="toppings">Топпинги</a></li>
@@ -12,7 +12,6 @@
       </ul>
     </div>
     <div class="content">
-      <app-breadcrumb ></app-breadcrumb>
       <router-outlet></router-outlet>
     </div>
   </div>

@@ -1,1 +1,132 @@
-<p>items works!</p>
+<div class="padding-left-right-15">
+  <select [(ngModel)]="selectedCategory" (change)="selectionChangedCategory()" class="form-select margin-bot-15 select_width" aria-label="Default select category">
+    <option [ngValue]="undefined" hidden selected>Выберите категорию...</option>
+    <option *ngFor="let c of categories" [ngValue]="c">{{c.name}}</option>
+  </select>
+
+  <input type="button" [disabled]="!selectedCategory" (click)="openModalWindow(true)" value="Добавить" class="btn btn-success margin-bot-15" />
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <td>Id</td>
+        <td>Название</td>
+        <td>Цена</td>
+        <td>Вес</td>
+        <td>Фото</td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.price}} руб.</td>
+          <td>{{item.weight}} гр.</td>
+          <td><img width="50px" height="30px" [src]="item.imageUrl"></td>
+          <td>
+            <input type="button" value="Изменить" class="btn btn-success btn-large" (click)="openModalWindow(false, item)"/>
+            <button type="button" class="btn btn-success btn-small" (click)="openModalWindow(false, item)">
+              <i class="pi pi-pencil"></i>
+            </button>
+        </td>
+        <td>
+            <input type="button" value="Удалить"  class="btn btn-danger btn-large" (click)="openDeleteWindow(item)"/>
+            <button type="button" class="btn btn-danger btn-small" (click)="openDeleteWindow(item)">
+              <i class="pi pi-times"></i>
+            </button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div #modalwindowborder  class="modal_window_border" style="display: none;" (click)="closeModalWindow()"></div>
+  <div #modalwindow class="modal_window" style="display: none;">
+    <form #itmForm="ngForm">
+      <div class="col-xs-10">
+        <div class="form-group">
+          <label class="margin_bot_5 form-label" for="itemName">Название продукта*</label>
+          <input type="text" class="form-control" name="itemName" [(ngModel)]="itemName" #name="ngModel" required>
+          <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+            Введите название продукта
+          </div>
+        </div>
+
+        <div class="form-group margin_top_15">
+          <label class="margin_bot_5 form-label" for="itemUrlName">Url продукта*</label>
+          <input type="text" class="form-control" name="itemUrlName" [(ngModel)]="itemUrlName" #urlname="ngModel" required>
+          <div [hidden]="urlname.valid || urlname.untouched" class="alert alert-danger">
+            Введите url продукта
+          </div>
+        </div>
+
+        <div class="form_group_weight_price margin_top_15">
+          <div class="form-group form_group_weight_price_item">
+            <label class="form-label" for="itemPrice">Цена (Руб.)*</label>
+            <input type="number" class="form-control" name="itemPrice" [(ngModel)]="itemPrice" #price="ngModel" required>
+            <div [hidden]="price.valid || price.untouched" class="alert alert-danger">
+              Введите цену продукта
+            </div>
+          </div>
+
+          <div class="form-group form_group_weight_price_item">
+            <label class="form-label" for="itemWeight">Вес (Грамм)*</label>
+            <input type="number" class="form-control" name="itemWeight" [(ngModel)]="itemWeight" #weight="ngModel" required>
+            <div [hidden]="weight.valid || weight.untouched" class="alert alert-danger">
+              Введите вес продукта
+            </div>
+          </div>
+
+          <div class="form-group form_group_weight_price_item">
+            <label class="form-label" for="itemCount">Кол-во (Шт)*</label>
+            <input type="number" class="form-control" name="itemCount" [(ngModel)]="itemCount" #count="ngModel" required>
+            <div [hidden]="count.valid || count.untouched" class="alert alert-danger">
+              Введите кол-во продукта
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="margin_top_15 form-label" for="itemIngredients">Состав*</label>
+          <textarea class="form-control" name="itemIngredients" [(ngModel)]="itemIngredients" #ingredients="ngModel" rows="3" required></textarea>
+          <div [hidden]="ingredients.valid || ingredients.untouched" class="alert alert-danger">
+            Введите состав продукта
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="margin_top_15 form-label" for="itemDesription">Описание</label>
+          <textarea class="form-control" name="itemDesription" [(ngModel)]="itemDesription" #desription="ngModel" rows="3"></textarea>
+        </div>
+
+        <div class="form-group margin_top_15">
+          <label for="imgFile" class="form-label margin_bot_5">Фото*</label>
+          <input class="form-control margin_bot_5" type="file" id="imgFile" name="imgFile" accept="image/.jpeg,.jpg,.png,.webp" (click)="onFilePhotoClick()" [(ngModel)]="filePhotoInput" (change)="onFilePhotoSelected($event)" #filePhotoUpload="ngModel">
+          <img id="previewPhoto" width="80px" height="50px" style="display: none;" [src]="itemImageData">
+          <div *ngIf="(itemImageData === '' || itemImageData === undefined) && !filePhotoUpload.untouched" class="alert alert-danger">
+            Выберите фото продукта
+          </div>
+        </div>
+
+        <div class="margin_top_40">
+          <p id="error" class="error_text" >{{errorMessage}}</p>
+        </div>
+
+        <div class="form-group btn_container margin_top_15">
+          <button #addButton class="btn btn-success" [disabled]="name.invalid || urlname.invalid || price.invalid || weight.invalid || count.invalid || itemImageData === undefined || itemImageData === ''" (click)="addItem()">Добавить</button>
+          <button #updateButton class="btn btn-primary" [disabled]="name.invalid || urlname.invalid || price.invalid || weight.invalid || count.invalid || itemImageData === undefined || itemImageData === ''" (click)="updateItem()">Сохранить</button>
+          <button class="btn btn-secondary" (click)="closeModalWindow()">Отмена</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div #modaldeletewindowborder class="modal_window_border" style="display: none;" (click)="closeDeleteWindow()"></div>
+  <div #modaldeletewindow class="modal_window width_300" style="display: none;">
+    <div class="info_text">Вы действительно хотите удалить выбранный элемент?</div>
+    <div class="form-group btn_container margin_top_40">
+      <button #deleteButtonYes class="btn btn-primary" (click)="deleteItem()">Да</button>
+      <button #deleteButtonNo class="btn btn-secondary" (click)="closeDeleteWindow()">Нет</button>
+    </div>
+  </div>
+</div>
+

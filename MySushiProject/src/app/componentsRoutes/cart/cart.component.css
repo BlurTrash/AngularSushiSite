@@ -1,0 +1,41 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cart__component {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1;
+  color: #1f1f1f;
+  font-weight: 300;
+  background-color: #ffffff;
+}
+
+.table-responsive {
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.font_style {
+  font-weight: normal;
+  font-size: 14px;;
+  color: #1f1f1f;
+}
+/* .table-bordered {
+  border: 1px solid #ddd;
+}*/
+
+.table-bordered thead th{
+  background: #f7f7f7;
+}

@@ -15,7 +15,7 @@
   </svg>
 
   <header class="header" [class.header__relative]="!router.isActive('', true)">
-    <div class="container">
+    <div class="header__container">
       <div class="header__inner">
         <div class="header__logo">
           <div class="header__logo__icon"></div>
@@ -33,7 +33,28 @@
           <p class="text__right">Прием заказов: +79990001122</p>
           <p class="text__right">+79990001123</p>
         </div>
-        <button class="nav-toggle" title="openMenu" type="button" (click)="openMenuBurger()">
+        <div class="cart__box">
+          <button class="order dropdown" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <!-- order  --> <!-- (click)="openDropdownCart()" -->
+            <span>
+              <i class="fa-caret-down"></i>
+            </span>
+            <span class="cart__total">1</span>
+          </button>
+          <div class="dropdown-menu float-end" aria-labelledby="dropdownMenuButton">
+            <div class="cart__body">sgsgsgsgsggggssgsgsgsgsggggs</div>
+            <div class="cart__link">
+              <p class="text-center">
+                <a routerLink="/cart">
+                  <b>
+                    <i class="pi pi-shopping-cart"></i>
+                    <i class="fa-shopping-cart">Открыть корзину</i>
+                  </b>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="nav-toggle" title="Open menu" type="button" (click)="openMenuBurger()">
             <span class="nav-toggle__item"></span>
         </button>
         <div #menubg (click)="closeMenuBurger()" class="menu__burger" style="display: none;"></div>

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\FileStorage\\CategoriesImg\\testimg1.png"
     },
     {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\222-500x500.png",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\222-500x500.png"
+    },
+    {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\canada_maki-500x500.jpeg",
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\canada_maki-500x500.jpeg"
     },
@@ -23,6 +27,26 @@
     {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\ikura-500x500.png",
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\ikura-500x500.png"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\imbirnij_roll-500x500.jpeg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\imbirnij_roll-500x500.jpeg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\itoshi_maki-500x500.jpeg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\itoshi_maki-500x500.jpeg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\kalifornija-500x500.jpeg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\kalifornija-500x500.jpeg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\krevetka-i-kalmar-500x500.png",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\krevetka-i-kalmar-500x500.png"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\nevada-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\nevada-500x500.jpg"
     },
     {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\pizza-capreze-500x500.jpg",
@@ -57,6 +81,22 @@
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\pizza_mushrooms-500x500.jpg"
     },
     {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\s-lososem-i-musom-marakujja-500x500.png",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\s-lososem-i-musom-marakujja-500x500.png"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\s-ugrem-omletom-i-syrom-_page-0001-500x500.png",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\s-ugrem-omletom-i-syrom-_page-0001-500x500.png"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\s_lososem_i_avocado-500x500.jpeg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\s_lososem_i_avocado-500x500.jpeg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\s_lososem_i_sirom-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\s_lososem_i_sirom-500x500.jpg"
+    },
+    {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\set-500-1-500x500.jpg",
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\set-500-1-500x500.jpg"
     },
@@ -81,6 +121,14 @@
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\set-500-6-500x500.jpg"
     },
     {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\sila_samuraya-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\sila_samuraya-500x500.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\slososemkrevetkojimango_page-0001_cut-photo.ru-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\slososemkrevetkojimango_page-0001_cut-photo.ru-500x500.jpg"
+    },
+    {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\spaisi-syake-500x500-500x500.jpg",
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\spaisi-syake-500x500-500x500.jpg"
     },
@@ -89,12 +137,40 @@
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\syake-gurme-500x500.png"
     },
     {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\syake_maguro_hoso-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\syake_maguro_hoso-500x500.jpg"
+    },
+    {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\tamago-500x500.png",
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\tamago-500x500.png"
     },
     {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\tempurnyj_roll_2-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\tempurnyj_roll_2-500x500.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\tjoplyj_s_krevetkoj_i_mango-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\tjoplyj_s_krevetkoj_i_mango-500x500.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\tokio-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\tokio-500x500.jpg"
+    },
+    {
       "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\unagi-500x500.png",
       "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\unagi-500x500.png"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\vulkan_maki-500x500.jpeg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\vulkan_maki-500x500.jpeg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\zapechenie111-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\zapechenie111-500x500.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\Проекты\\WebProjects\\AngularSushiSite\\MyShushiApi\\MyShushiSiteApi\\MyShushiSiteApi\\wwwroot\\FileStorage\\ItemsImg\\zapechenyj-s-ugrem-krevetkoj-i-mango-500x500.jpg",
+      "PackagePath": "staticwebassets\\FileStorage\\ItemsImg\\zapechenyj-s-ugrem-krevetkoj-i-mango-500x500.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyShushiSiteApi.Microsoft.AspNetCore.StaticWebAssets.props",

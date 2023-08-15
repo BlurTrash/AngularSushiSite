@@ -69,7 +69,8 @@ img {
   flex: 1 0 500px;
   padding: 20px;
   color: #025072;
-  background-color: #f0f4f6;
+  /* background-color: #f0f4f6; */
+  background-color: white;
 }
 
 .info__title__header {

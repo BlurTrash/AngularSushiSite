@@ -8,6 +8,11 @@ namespace MyShushiSiteApi.DbModels
     /// </summary>
     public partial class Category
     {
+        public Category()
+        {
+            Items = new HashSet<Item>();
+        }
+
         public long Id { get; set; }
         public bool? IsActive { get; set; }
         public DateTime CreateDate { get; set; }
@@ -16,5 +21,7 @@ namespace MyShushiSiteApi.DbModels
         public string ImageUrl { get; set; } = null!;
         public string IconUrl { get; set; } = null!;
         public string? FullUrl { get; set; }
+
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

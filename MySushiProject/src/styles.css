@@ -117,6 +117,10 @@ p {
   content: "\e90b";
 }
 
+.pi-shopping-cart:before {
+  content: "\e980";
+}
+
 .basket {
   width: 160px;
   height: 35px;

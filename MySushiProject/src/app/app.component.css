@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Container */
-.container {
+.header__container {
   width: 100%;
  /*  max-width: 1200px;
   margin: 0 auto; */
@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin: 0 20px;
 }
 
 .header__logo {
@@ -127,6 +128,70 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.2;
   white-space: nowrap;
   min-width: 230px;
+}
+
+/* cart-box */
+.cart__box {
+  width: auto;
+}
+
+.order {
+  border: none;
+  background: transparent;
+  position: relative;
+}
+
+.fa-caret-down {
+  background-image: url(src/assets/images/basket_new.png);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.cart__total {
+  font-weight: 700;
+  color: #ffffff;
+  background: #70afbb;
+  position: absolute;
+  top: 62%;
+  left: 24px;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 24px;
+  display: block;
+}
+
+.cart__body {
+  padding: 5px;
+  height: 80px;
+}
+
+.text-center {
+  margin-bottom: 10px;
+}
+
+.cart__link a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.pi-shopping-cart {
+  color:  #337ab7;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 14;
+}
+
+.fa-shopping-cart {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  font-weight: 600;
+  margin-left: 10px;
 }
 
 /* nav-toggle */
@@ -521,6 +586,16 @@ main {
     top: 50px;
     right: 30px;
   }
+
+  .cart__box {
+    position: absolute;
+    top: 45px;
+    right: 80px;
+  }
+
+  .header__inner {
+    margin-right: 100px;
+  }
 }
 
 @media (max-width: 767px)  {
@@ -532,6 +607,9 @@ main {
     height: 400px;
   }
 
+  .header__inner {
+    margin-left: 20px;
+  }
   .header__menu {
     background: none;
     min-height: auto;
@@ -542,6 +620,10 @@ main {
 
   .nav-toggle {
     top: 20px;
+  }
+
+  .cart__box {
+    top: 15px;
   }
 
   .text-mod-1 {

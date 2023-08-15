@@ -33,4 +33,11 @@ export class AppComponent {
       this.menuMobile.nativeElement.style.right = "-280px";
     }
   }
+
+  openDropdownCart() : void {
+    let cartElement = document.getElementById("cart-menu");
+    if(cartElement) {
+      cartElement.style.display = "block";
+    }
+  }
 }

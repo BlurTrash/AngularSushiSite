@@ -26,6 +26,7 @@ import { OrdersComponent } from './componentsRoutes/admin-panel/menu-list/orders
 import { ProductComponent } from './componentsRoutes/menu/product/product.component';
 import { BreadcrumbService } from './services/breadcrumbService/breadcrumb.service';
 import { ProductCardComponent } from './components/productCard/product-card/product-card.component';
+import { CartComponent } from './componentsRoutes/cart/cart.component';
 
 const pizzasRoutes: Routes = [
   { path: 'pizza/:id', data: { breadcrumb: 'Товар'}, component: ProductComponent}
@@ -63,6 +64,7 @@ const appRoutes: Routes = [
   { path: 'promotions', data: { breadcrumb: 'Акции'}, component: PromotionsComponent},
   { path: 'delivery', data: { breadcrumb: 'Доставка'}, component: DeliveryComponent},
   { path: 'contacts', data: { breadcrumb: 'Контакты'}, component: ContactsComponent},
+  { path: 'cart', data: { breadcrumb: 'Корзина'}, component: CartComponent},
   { path: '**', redirectTo: '/'}
 ];
 
@@ -88,7 +90,8 @@ const appRoutes: Routes = [
     UsersComponent,
     OrdersComponent,
     ProductComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

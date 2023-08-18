@@ -27,6 +27,7 @@ import { ProductComponent } from './componentsRoutes/menu/product/product.compon
 import { BreadcrumbService } from './services/breadcrumbService/breadcrumb.service';
 import { ProductCardComponent } from './components/productCard/product-card/product-card.component';
 import { CartComponent } from './componentsRoutes/cart/cart.component';
+import { CartService } from './services/cartService/cart.service';
 
 const pizzasRoutes: Routes = [
   { path: 'pizza/:id', data: { breadcrumb: 'Товар'}, component: ProductComponent}
@@ -100,7 +101,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [BreadcrumbService],
+  providers: [BreadcrumbService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

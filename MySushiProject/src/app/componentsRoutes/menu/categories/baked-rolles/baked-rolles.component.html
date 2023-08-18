@@ -10,7 +10,7 @@
     <div class="items__container">
       <app-product-card *ngFor="let item of itemsList" [name]="item.name"
       [ingridients]="item.ingredients" [price]="item.price" [itemId]="item.id" [imageUrl]="item.imageUrl"
-      [itemLink]="['./', item.id]"></app-product-card>
+      [itemLink]="['./', item.id]" [item]="item"></app-product-card>
     </div>
 
     <div class="text">

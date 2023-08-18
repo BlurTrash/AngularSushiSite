@@ -36,7 +36,7 @@
     <div class="items__container">
       <app-product-card *ngFor="let pizza of pizzaList" [name]="pizza.name"
       [ingridients]="pizza.ingredients" [price]="pizza.price" [itemId]="pizza.id" [imageUrl]="pizza.imageUrl"
-      [itemLink]="['./', pizza.id]"></app-product-card>
+      [itemLink]="['./', pizza.id]" [item]="pizza"></app-product-card>
     </div>
 
 

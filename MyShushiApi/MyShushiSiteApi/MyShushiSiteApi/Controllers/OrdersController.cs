@@ -83,7 +83,7 @@ namespace MyShushiSiteApi.Controllers
                     UserPhone = newOrder.UserPhone,
                     OrderLines = newOrder.OrderLines.Select(ol => new OrderLineVM 
                     { 
-                        Id = ol.Id, ItemId = ol.ItemId, OrderId = ol.OrderId, Price = ol.Price, Quantity = ol.Quantity, UnitPrice = ol.UnitPrice 
+                        Id = ol.Id, Item = new ItemVM(), OrderId = ol.OrderId, Price = ol.Price, Quantity = ol.Quantity, UnitPrice = ol.UnitPrice 
                     }).ToList()
                 };
 
